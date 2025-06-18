@@ -18,7 +18,9 @@ public class LinkedListLearning {
 //        gettingElements(placesToVisit);
 //        printItinerary(placesToVisit);
 //        printItinerary2(placesToVisit);
-        printItinerary3(placesToVisit);
+//        printItinerary3(placesToVisit);
+
+        testIterator(placesToVisit);
     }
 
     private static void addMoreElements(LinkedList<String> list) {
@@ -122,5 +124,18 @@ public class LinkedListLearning {
             fromPlace = next;
         }
         System.out.println("End at: " + list.getLast());
+    }
+
+    private static void testIterator(LinkedList<String> list) {
+        /*
+        When the iterator is created, the cursor position will be point at the position before the first element
+         */
+        var iterator = list.listIterator();
+        while (iterator.hasNext()) {
+            if (iterator.next().equalsIgnoreCase("China")) {
+                iterator.add("Thailand");
+            }
+        }
+        System.out.println(list);
     }
 }
