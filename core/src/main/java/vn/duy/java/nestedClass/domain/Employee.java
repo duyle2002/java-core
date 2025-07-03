@@ -3,13 +3,9 @@ package vn.duy.java.nestedClass.domain;
 import java.util.Comparator;
 import java.util.Objects;
 
-enum EmployeeSortType {
-    NAME, YEAR_STARTED
-}
-
 public class Employee {
 
-    static class EmployeeComparator <T extends Employee> implements Comparator<Employee> {
+    public static class EmployeeComparator <T extends Employee> implements Comparator<Employee> {
         private EmployeeSortType sortType;
 
         public EmployeeComparator(EmployeeSortType sortType) {

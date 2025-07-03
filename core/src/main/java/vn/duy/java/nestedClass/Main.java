@@ -1,4 +1,8 @@
-package vn.duy.java.nestedClass.domain;
+package vn.duy.java.nestedClass;
+
+import vn.duy.java.nestedClass.domain.Employee;
+import vn.duy.java.nestedClass.domain.EmployeeSortType;
+import vn.duy.java.nestedClass.domain.StoreEmployee;
 
 import java.util.ArrayList;
 import java.util.List;
