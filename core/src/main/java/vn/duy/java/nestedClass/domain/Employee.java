@@ -12,9 +12,11 @@ public class Employee {
             this.sortType = sortType;
         }
 
+        public EmployeeComparator() {}
+
         @Override
         public int compare(Employee o1, Employee o2) {
-            if (Objects.requireNonNull(sortType) == EmployeeSortType.YEAR_STARTED) {
+            if (sortType == EmployeeSortType.YEAR_STARTED) {
                 return o1.yearStarted - o2.yearStarted;
             }
             return o1.name.compareTo(o2.name);
