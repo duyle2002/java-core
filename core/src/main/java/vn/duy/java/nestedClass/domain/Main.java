@@ -18,6 +18,16 @@ public class Main {
 //        employees.sort(employeeComparator);
         employees.sort(new Employee.EmployeeComparator<>(EmployeeSortType.YEAR_STARTED));
 
-        System.out.println(employees);
+        System.out.println("Store employees: ");
+        List<StoreEmployee> storeEmployees = new ArrayList<>(
+                List.of(
+                        new StoreEmployee("1", "Duy", 2025, "A"),
+                        new StoreEmployee("2", "Quan", 2020, "A"),
+                        new StoreEmployee("3", "an", 2019, "B"),
+                        new StoreEmployee("4", "Tuan", 2023, "C")
+                )
+        );
+        storeEmployees.sort(new StoreEmployee().new StoreEmployeeComparator<>());
+        System.out.println(storeEmployees);
     }
 }
