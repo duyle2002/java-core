@@ -61,6 +61,9 @@ public class Main {
 
         people.sort(enhanceComparator);
         System.out.println(people);
+
+        people.removeIf(p -> p.lastName.equalsIgnoreCase("Duy"));
+        System.out.println(people);
     }
 
     interface EnhanceComparator<T extends Person> extends Comparator<T> {
